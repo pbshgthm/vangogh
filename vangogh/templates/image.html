@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Vangogh 2.0</title>
+	<link rel="stylesheet" type="text/css" href="../../static/main.css?v=2">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:100" rel="stylesheet">
+	<script src="../../static/plotly-latest.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+<img src="../../static/icons/image-overlay-2.png" class="dash-overlay" id="image-overlay">
+
+
+
+<img src="../../static/icons/moon.png" id="dark-btn">
+<img src="../../static/icons/sun.png" id="light-btn">
+
+<div id="nav-pane">
+	<div class="nav-links" id="nav-search-link">Search</div>
+	<div class="nav-links nav-links-sel" id="nav-image-link">Upload image</div>
+	<div class="nav-links " id="nav-blog-link">Blog</div>
+	<div class="nav-links " id="nav-help-link">Help</div>
+</div>
+
+<div id="main-full-plot"></div>
+<div id="main-full-close">X</div>
+<img src="../../static/icons/pause.png" class="rot-stop-btn" id="full-rot-btn"/>
+
+
+	<div id="vangogh-image">
+		<label id="image-upload-area">
+			<input type="file" id="image-upload-btn" onchange="readURL(this);">
+		</label>
+		
+		<div id="image-preview-backdrop"></div>
+		<img src="../../static/icons/loader-img.gif" id="imgload">
+		<div id="image-preview" style="background-image: url('../../static/icons/starrynight.jpg')">Drag image or click to upload</div>
+		<div id="image-palette-bar">
+			<div class="image-palette-colors" clr="#929FB3" id="imgclr0" style="background-color: #929FB3">
+			</div><div class="image-palette-colors" clr="#566591" id="imgclr1" style="background-color: #566591">
+			</div><div class="image-palette-colors" clr="#353F5C" id="imgclr2" style="background-color: #353F5C">
+			</div><div class="image-palette-colors" clr="#131A2C" id="imgclr3" style="background-color: #131A2C"></div>
+		</div>
+			<div id="image-color-code">qwerty</div>
+			<div class="image-copy-alert">copied to clipoard</div>
+			<div id="image-palette-size-pane">
+				<div class="palette-size-opt">3</div>
+				<div class="palette-size-opt palette-size-opt-sel">4</div>
+				<div class="palette-size-opt">5</div>
+				<div class="palette-size-opt">6</div>
+				<div class="palette-size-opt">7</div>		
+			</div>
+			
+			
+			<div id="image-color-space">
+				<div id="image-optn-hex" class="image-color-space-opt image-color-space-opt-sel">HEX</div>
+				<div id="image-optn-rgb" class="image-color-space-opt ">RGB</div>
+				<div id="image-optn-hsl" class="image-color-space-opt ">HSL</div>		
+			</div>
+
+		<div id="image-sample-panel">
+			
+			<div id="ims0" class="image-sample-img image-sample-img-sel" style="background-image: url(../../static/icons/sample/sample0.png);">
+			</div><div id="ims1" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample1.png);">	
+			</div><div id="ims2" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample2.png);">	
+			</div><div id="ims3" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample3.png);">	
+			</div><div id="ims4" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample4.png);">
+			</div><div id="ims5" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample5.png);">	
+			</div><div id="ims6" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample6.png);">	
+			</div><div id="ims7" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample7.png);">
+			</div><div id="ims8" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample8.png);">	
+			</div><div id="ims9" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample9.png);"></div>	
+			
+		</div>
+		<div id="image-scatter-plot"></div>
+		<img src="../../static/icons/pause.png" class="rot-stop-btn" id="image-rot-btn"/>
+		<img src="../../static/icons/full.png" class="full-btn" id="image-full-btn" />
+		<img src="../../static/icons/pause.png" id="image-rot-overlay"/>
+		<img src="../../static/icons/full.png"  id="image-full-overlay" />
+
+	</div>
+
+
+
+
+</body>
+<script type="text/javascript" src="../../static/main.js?v=2"></script>
+<script type="text/javascript">
+
+
+
+  var currPlot={{data}};;
+ 
+
+</script>
+</html>

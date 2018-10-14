@@ -1,0 +1,9 @@
+flask
+flask_compress
+numpy
+scipy
+sklearn
+scikit-image
+pillow
+gunicorn
+requests

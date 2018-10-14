@@ -1,0 +1,82 @@
+
+
+----SYSTEM--------||||------------------
+
++ cloud storage setup
++ cache archiving and deleting api
++ cache auto clear on multiple refresh
++ logger
+
+
+----UI------------||||------------------
+
+
+
++ theme transition
+* plot transition
+* sample image set
+* mainGIF in dark theme
+* rotSpeed in fullscreen
++ animation in image
++ loager gif text
+* overlay refining
++ cursor styling
+
+
+
+----DONE----------||||-------------------
+
+//+ cache setup
+//+ palette creation
+//* full screen integ
+//* index styling
+//+ full screen for image
+//+ nav system
+//+ colorSpace and clipBoard
+//+ image transitionStyle
+//+ search refresh button
+//+ customisible palette in swatch
+//+ palette size selection
+//+ palette sel and plot indication systems
+//+ keyboard controls
+//+ help overlay
+//* reduce bg grey value
+//* remove sharp corners
+//+ landing page redesign
+
+----PROMPT--------||||-------------------
+
+
+search
+contextually associated
+examples - emotion, concepts, color for every word ..?
+compound words
+color palettes, why ?
+
+
+----NOTE----------||||-------------------
+
+
+focus on search, image tool is not new/cool
+
+
+----NAV-----------||||-------------------
+
+index  -> search | searchbar
+	   -> image  | button
+
+
+search -> search | button | disabled
+	   -> home   | button
+	   -> image  | button
+
+image  -> search | button 
+	   -> home   | logo
+	   -> image  | button | disabled
+
+
+----NAMES---------||||-------------------
+
+magicolor
+verticolor
+
