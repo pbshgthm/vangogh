@@ -1,4 +1,4 @@
-from vangogh import app
+from app import app
 import os
 import logging
 

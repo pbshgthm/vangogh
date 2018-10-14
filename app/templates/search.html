@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Vangogh 2.0</title>
+	<link rel="stylesheet" type="text/css" href="../../static/main.css?v=2">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:100" rel="stylesheet">
+	<script src="../../static/plotly-latest.min.js"></script>
+  	<script src="../../static/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<img src="../../static/icons/dash-overlay-1.png" class="dash-overlay" id="dash-overlay-0">
+<img src="../../static/icons/dash-overlay-2.png" class="dash-overlay" id="dash-overlay-1">
+<img src="../../static/icons/dash-overlay-3.png" class="dash-overlay" id="dash-overlay-2">
+<img src="../../static/icons/dash-overlay-4.png" class="dash-overlay" id="dash-overlay-3">
+<img src="../../static/icons/dash-overlay-5.png" class="dash-overlay" id="dash-overlay-4">
+
+<img src="../../static/icons/moon.png" id="dark-btn">
+<img src="../../static/icons/sun.png" id="light-btn">
+
+<div id="nav-pane">
+	<div class="nav-links nav-links-sel" id="nav-search-link">Search</div>
+	<div class="nav-links " id="nav-image-link">Upload image</div>
+	<div class="nav-links " id="nav-blog-link">Blog</div>
+	<div class="nav-links " id="nav-help-link">Help</div>
+</div>
+
+<img src="../../static/icons/loader.gif" id="dash-loader">
+
+<canvas id="palette-canvas" width="960px" height="540px" style="display: none;"></canvas>
+<div id="main-full-plot"></div>
+<div id="main-full-close">X</div>
+<img src="../../static/icons/pause.png" class="rot-stop-btn" id="full-rot-btn"/>
+
+<div id="dash-error-msg"></div>
+<div id="vangogh-dash">
+	<input id="dash-search"type="text" name="dash-search" placeholder="Search for palettes..">
+	<img src="../../static/icons/search.png" id="dash-search-icon">
+	<div id="palette-size-text">palette size</div>
+	<div id="palette-size-pane">
+		<div class="palette-size-opt">3</div>
+		<div class="palette-size-opt palette-size-opt-sel">4</div>
+		<div class="palette-size-opt">5</div>
+		<div class="palette-size-opt">6</div>
+		<div class="palette-size-opt">7</div>
+		<!--<div class="palette-size-change">-</div><span id="palette-size-val"></span><div class="palette-size-change">+</div>-->
+	</div>
+	<div id="dash-load"></div>
+	<div id="main-scatter-plot"></div>
+	<img src="../../static/icons/pause.png" class="rot-stop-btn" id="main-rot-btn"/>
+	<img src="../../static/icons/full.png" class="full-btn" id="main-full-btn" />
+	<img src="../../static/icons/pause.png" id="main-rot-overlay"/>
+	<img src="../../static/icons/full.png"  id="main-full-overlay" />
+
+
+	<div id="palette-pane"></div>
+	<div id="cluster-pane"></div>
+	<a id="swatch-download" download="vangogh.png"><img src="../../static/icons/download.png" id="dash-swatch"></a>
+	<div id="dash-color-code"></div>
+	<div id="dash-color-space">
+		<div id="dash-optn-hex" class="dash-color-space-opt dash-color-space-opt-sel">HEX</div>
+		<div id="dash-optn-rgb" class="dash-color-space-opt ">RGB</div>
+		<div id="dash-optn-hsl" class="dash-color-space-opt ">HSL</div>		
+	</div>
+	<img src="../../static/icons/refresh.png" id="dash-refresh">
+	
+
+
+</body>
+<script type="text/javascript" src="../../static/main.js?v=2"></script>
+<script type="text/javascript">
+</script>
+</html>
