@@ -1,5 +1,5 @@
 from flask import Flask,jsonify,render_template,request,send_file
-from vangogh.engine import *
+from app.engine import *
 import json
 from flask_compress import Compress
 from werkzeug.utils import secure_filename
@@ -33,7 +33,7 @@ def palette():
 
 @app.route('/image')
 def image():
-	data=json.load(open('vangogh/static/image-init.json'))
+	data=json.load(open('app/static/image-init.json'))
 	return render_template('image.html',data=data)
 
 @app.route('/api/img', methods=['POST'])
@@ -46,7 +46,7 @@ def img():
 			return 'NOFILE'
 		if file and True:
 			img=getImage(BytesIO(file.read()),mode='RGB',size_=100)[1]
-	else: img=getImage('vangogh/static/icons/sample/'+reqType+'.png',mode='RGB',size_=100)[1]
+	else: img=getImage('app/static/icons/sample/'+reqType+'.png',mode='RGB',size_=100)[1]
 	colorData={}
 	colorData['palette']=[getPalette(img,i,mode='HEX') for i in range(3,8)]
 	colorData['scatter']=getPlot(img)
