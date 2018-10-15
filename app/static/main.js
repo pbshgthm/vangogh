@@ -786,6 +786,9 @@ $("#dash-search-icon").bind('click',function(){
  if((window.location+'').indexOf('/search')!=-1){
 
 $(document).keydown(function(e) {
+
+    if(e.target.nodeName.toLowerCase()=='input')return;
+    
     if(e.which == 32) {
         if(stopRotate){
           stopRotate=false;

@@ -2,7 +2,7 @@
 
 ----SYSTEM--------||||------------------
 
-+ cloud storage setup
++ minimise file size
 + cache archiving and deleting api
 + cache auto clear on multiple refresh
 + logger
@@ -11,7 +11,7 @@
 ----UI------------||||------------------
 
 
-
++ keyboard shortcuts in help
 + theme transition
 * plot transition
 * sample image set
@@ -21,11 +21,13 @@
 + loager gif text
 * overlay refining
 + cursor styling
+* close button on full screen
 
 
 
 ----DONE----------||||-------------------
 
+//+ cloud storage setup
 //+ cache setup
 //+ palette creation
 //* full screen integ

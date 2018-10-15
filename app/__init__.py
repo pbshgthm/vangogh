@@ -11,11 +11,6 @@ app = Flask(__name__)
 COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml', 'application/json', 'application/javascript']
 Compress(app)
 
-UPLOAD_FOLDER = '/desk/uploads'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-ifame_data=None
-
 
 @app.route('/cachelist')
 def cacheList():

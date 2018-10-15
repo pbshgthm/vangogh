@@ -353,7 +353,7 @@ body{
 }
 #main-full-plot{
 
-	z-index: 10;
+	z-index: 20;
 	position: absolute;
 	background-color: blue;
 	top: 100vh;
@@ -791,11 +791,6 @@ body{
 }
 
 
-
-
-
-
-
 #image-upload-area {
 	position: absolute;
     width: 32vw;
@@ -1043,7 +1038,7 @@ body{
 	left:30vw;
 	bottom: 7.3vh;
 	opacity: 0.3;
-	z-index: 15;
+	z-index: 20;
 	position: absolute;	
 	width: 2vw;
 	transition-duration: 0.5s;
