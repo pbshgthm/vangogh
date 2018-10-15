@@ -214,11 +214,11 @@ body{
 }
 
 #main-prompt{
-	text-align: left;
+	text-align: right;
 	position: absolute;
 	top: 68vh;
-	width: 14vw;
-	left: 39.5vw;
+	width: 20vw;
+	left: 39vw;
 	font-family: 'Roboto', sans-serif;
 	font-size: 2vw;
 	color: #546E7A;
@@ -229,11 +229,12 @@ body{
 	top: 68vh;
 	width: 15vw;
 	left: 54vw;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 2vw;
 	color: #470041;
 	height: 2.5vw;
 	overflow-y: hidden;
+	font-weight: bold;
 }
 #main-prompt-list{
 }

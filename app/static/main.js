@@ -48,7 +48,7 @@ function changePrompt(ind){
         $('#main-prompt-list').html(word);
       },450);
       setTimeout(function(){
-        $('#main-prompt-list').animate({'margin-top':'0.2vw','opacity':'1'},200);
+        $('#main-prompt-list').animate({'margin-top':'0vw','opacity':'1'},200);
       },450);
       setTimeout(function(){
         changePrompt(++ind);
