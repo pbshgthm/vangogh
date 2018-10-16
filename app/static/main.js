@@ -14,10 +14,16 @@ var currCluster;
 var paletteSize=4;
 var currKey;
 
-$('#preload').fadeOut();
+
+var waitTime=0;
+if((window.location+'').split('/')[3]=="")waitTime=2000;
+
+setTimeout(function(){
+  $('#preload').fadeOut(); 
+},waitTime);
 setTimeout(function(){
   $('#loaded').fadeIn();  
-},1000);
+},1000+waitTime);
 
 function changePrompt(ind){
   var wordList=[

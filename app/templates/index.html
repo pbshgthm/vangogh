@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="static/main.css?v=2">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:100" rel="stylesheet">
 	<script type="text/javascript" src="static/jquery.min.js"></script>
+  	<script type="text/javascript" src="static/plotly-gl3d-latest.min.js"></script>
 
 </head>
 <body>
@@ -37,6 +38,7 @@
 
 </body>
 <script type="text/javascript">
+
 	var head = document.getElementsByTagName('head')[0];
 	var mainjs = document.createElement("script");
 	var jquery = document.createElement("script");
@@ -51,7 +53,6 @@
 	}
 	else
 	{
-    	plotly.src = "static/plotly-gl3d-latest.min.js";
     	mainjs.src = "static/main.js";		
     	
  	}
