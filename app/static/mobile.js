@@ -1,0 +1,1 @@
+$('body').append('<div id="mobile-ban">Not supported on mobile devices</div>');

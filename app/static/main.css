@@ -8,6 +8,17 @@ body{
 	background-color:#FAFAFA;
 
 }
+#mobile-ban{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #FAFAFA;
+	font-family: 'Lato', sans-serif;
+	font-size: 50px;
+	z-index: 30;
+	text-align: center;
+	padding-top: 48vh;
+}
 .dash-overlay{
 	z-index: 12;
 	position: absolute;
