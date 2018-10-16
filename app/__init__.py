@@ -59,7 +59,11 @@ def generate():
 	if search_term[-1]==' ':
 		search_term=search_term[:-1]
 
-	cache=os.listdir('desk')
+	try:
+		cache=os.listdir('desk')
+	except:
+		os.makedirs('desk')
+		cache=[]
 	if not search_term.replace(' ','_') in cache:
 		link_list=search(search_term,azureKey=keys.azureKey)
 		if(len(link_list)==0): 
