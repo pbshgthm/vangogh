@@ -8,6 +8,33 @@ body{
 	background-color:#FAFAFA;
 
 }
+
+
+#preload{
+	position: absolute;
+	width: 70vw;
+	height: 100vh;
+	font-family: 'Lato', sans-serif;
+	font-size: 50px;
+	z-index: 30;
+	text-align: center;
+	padding-top: 60vh;
+	padding-right: 15vw;
+	padding-left: 15vw;
+	text-align: center;
+}
+
+#index-loader{
+	position: absolute;
+	top: 12vh;
+	width: 30vw;
+	left: 35vw;
+}
+
+#loaded{
+	display: none;
+}
+
 #mobile-ban{
 	position: absolute;
 	width: 70vw;

@@ -27,6 +27,7 @@
 
 ----DONE----------||||-------------------
 
+//+ mobile block
 //+ cloud storage setup
 //+ cache setup
 //+ palette creation

@@ -14,6 +14,10 @@ var currCluster;
 var paletteSize=4;
 var currKey;
 
+$('#preload').fadeOut();
+setTimeout(function(){
+  $('#loaded').fadeIn();  
+},1000);
 
 function changePrompt(ind){
   var wordList=[
