@@ -96,10 +96,10 @@ window.onresize = function() {
 
 function copyToClipboard(txt) {
     var $temp = $("<input>");
-      $("body").append($temp);
-      $temp.val(txt).select();
-      document.execCommand("copy");
-      $temp.remove();
+    $("body").append($temp);
+    $temp.val(txt).select();
+    document.execCommand("copy");
+    $temp.remove();
 }
 
 
@@ -501,7 +501,7 @@ function updatePlot(data,plot_id,size_='min',setRot=false,onlyPlot=false){
 
 
   var pointSize=7;
-  if(navigator.userAgent.indexOf("Firefox") != -1)pointSize=7;
+  if(navigator.userAgent.indexOf("Firefox") != -1)pointSize=9;
 
   currPlot=data;
 

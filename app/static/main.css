@@ -220,7 +220,7 @@ body{
 	width: 20vw;
 	left: 33vw;
 	font-family: 'Roboto', sans-serif;
-	font-size: 2vw;
+	font-size: 1.7vw;
 	color: #546E7A;
 }
 #main-prompt-list-holder{
@@ -228,9 +228,9 @@ body{
 	position: absolute;
 	top: 68vh;
 	width: 15vw;
-	left: 54vw;
+	left: 53.5vw;
 	font-family: 'Roboto', sans-serif;
-	font-size: 2vw;
+	font-size: 1.7vw;
 	color: #470041;
 	height: 2.5vw;
 	overflow-y: hidden;
@@ -242,8 +242,8 @@ body{
 
 	padding-top: 5vh;
 	position: absolute;
-	width: 23vw;
-	left: 38.5vw;
+	width: 25.5vw;
+	left: 36.75vw;
 	top: 52.5vh;
 	text-align: justify;
 	text-align-last: center;
