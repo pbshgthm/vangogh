@@ -10,14 +10,16 @@ body{
 }
 #mobile-ban{
 	position: absolute;
-	width: 100vw;
+	width: 70vw;
 	height: 100vh;
 	background-color: #FAFAFA;
 	font-family: 'Lato', sans-serif;
 	font-size: 50px;
 	z-index: 30;
 	text-align: center;
-	padding-top: 48vh;
+	padding-top: 44vh;
+	padding-right: 15vw;
+	padding-left: 15vw;
 }
 .dash-overlay{
 	z-index: 12;

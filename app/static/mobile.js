@@ -1,1 +1,1 @@
-$('body').append('<div id="mobile-ban">Not supported on mobile devices</div>');
+$('body').append('<div id="mobile-ban">Sorry, VANNGOGH is currently not supported on mobile devices :(</div>');
