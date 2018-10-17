@@ -144,11 +144,21 @@ function eraseCookie(name) {
 
 
 function handleCookies(){
-  var cVal=readCookie('v')+'';
-  if(cVal=='null'){
-    overlayIn();
-    createCookie('v','init-v1',1);
+  if((window.location+'').indexOf('/search')!=-1){
+    var cVal=readCookie('vdash')+'';
+    if(cVal=='null'){
+      overlayIn();
+      createCookie('vdash','init-vd1',1);
+    }
   }
+  if((window.location+'').indexOf('/image')!=-1){
+    var cVal=readCookie('vimg')+'';
+    if(cVal=='null'){
+      overlayIn();
+      createCookie('vimg','init-vi1',1);
+    }
+  }
+  
 }
 
 
@@ -685,23 +695,22 @@ function updatePlot(data,plot_id,size_='min',setRot=false,onlyPlot=false){
 
 $('.full-btn').click(function(){
 
-    $('#full-rot-btn').css('transform','scale(1)')
+    $('#full-rot-btn').css('transform','scale(1)');
+    $('#full-close-btn').css('transform','scale(1)')
     $('#main-full-plot').addClass('full-plot-sel');
     
     setTimeout(function(){
       updatePlot(currPlot,'main-full-plot',size_='max',setRot=true,purge=false);  
     },1000);
     
-    setTimeout(function(){
-      $('#main-full-close').fadeIn(500);  
-    },500);
+   
 
 });
 
-$('#main-full-close').click(function(){
+$('#full-close-btn').click(function(){
     $('#full-rot-btn').css('transform','scale(0)')
     $('#main-full-plot').removeClass('full-plot-sel');
-    $('#main-full-close').fadeOut(0);
+    $('#full-close-btn').css('transform','scale(0)')
     Plotly.purge('main-full-plot');
 });
 
@@ -712,10 +721,12 @@ $('#main-full-close').click(function(){
 
 
 $('.palette-size-opt').click(function(){
-  paletteSize=parseInt($(this).text());
+  var palS=parseInt($(this).text());
+  if(palS==paletteSize)return;
+  paletteSize=palS;
   $('.palette-size-opt').removeClass('palette-size-opt-sel');
   $(this).addClass('palette-size-opt-sel');
-  //$('#palette-size-pane').fadeOut(300);
+
   
   if((window.location+'').indexOf('/search')!=-1){
     search(currKey);
@@ -723,15 +734,6 @@ $('.palette-size-opt').click(function(){
   else
     updateImgPalette(imgClrs[paletteSize-3]);
 
-})
-
-
-
-$('#palette-size-text').click(function(){
-  if($('#palette-size-pane').css('display')=='none')
-    $('#palette-size-pane').fadeIn(300);
-  else
-    $('#palette-size-pane').fadeOut(300);
 })
 
 
@@ -845,11 +847,11 @@ $(document).keydown(function(e) {
     if(e.which == 32) {
         if(stopRotate){
           stopRotate=false;
-          $('.rot-stop-btn').attr('src','../../static/icons/pause.png')
+          $('.rot-stop-btn').attr('src','../../static/img/icons/pause.png')
         }
         else{
           stopRotate=true;
-          $('.rot-stop-btn').attr('src','../../static/icons/play.png')
+          $('.rot-stop-btn').attr('src','../../static/img/icons/play.png')
         } 
     }
     if(e.which == 37) {
@@ -945,37 +947,16 @@ $('#dark-btn').bind('click',function(){
   $('#light-btn').show();
 
 
-  $('#main-full-close').css('color','#F5F5F5');
-  $('.full-btn').addClass('full-btn-dark');
-  $('.rot-stop-btn').addClass('rot-stop-btn-dark');
   
   
 
   $('#main-full-plot').css('background-color','#141414');
-  $('#dash-swatch').css('filter','grayscale(100%) brightness(200%)');
   $('#main-scatter-plot').css('opacity','0');
   $('body').css('background-color','#141414');
   $('.nav-links').css('color','#BDBDBD');
   $('.cluster-circle').css('color','white');
-  //$('.cluster-circle').css('background-color','#263238');
-  //$('.cluster-circle-sel').css('background-color','#607D8B !important');
-
   $('.plot-btn').css('color','#F5F5F5');
-  //$('.plot-btn-sel').css('color','#F5F5F5');
   
-
-  /*
-  $(".palette-sel").mouseenter(function() {
-    var _id=this.id[3];
-    $('#pl-'+_id).addClass('plot-btn-sel');
-  });
-
-  $(".palette-sel").mouseleave(function() {
-    var _id=this.id[3];
-    if(_id!=plt_)$('#pl-'+_id).css("color","#90A4AE");
-  });
-  */
-
   
 
   if((window.location+'').indexOf('/search')!=-1){
@@ -1006,42 +987,14 @@ $('#light-btn').bind('click',function(){
   $('#dark-btn').show();
   $('#light-btn').hide();
 
-  $('#main-full-close').css('color','#263238');
-  $('.full-btn').removeClass('full-btn-dark');
-  $('.rot-stop-btn').removeClass('rot-stop-btn-dark');
- 
+  
   $('#main-full-plot').css('background-color','#FAFAFA');
-  $('#dash-swatch').css('filter','grayscale(100%)');
   $('#main-scatter-plot').css('opacity','0');
   $('body').css('background-color','#FAFAFA');
   $('.nav-links').css('color','#263238');
   $('.cluster-circle').css('color','black');
-  //$('.cluster-circle').css('background-color','#BDBDBD');
-  //$('.cluster-circle-sel').css('background-color','#E0E0E !important');
-  
   $('.plot-btn').css('color','#263238');
   
-  /*
-  $(".palette-sel").mouseenter(function() {
-    var _id=this.id[3];
-    $('#pl-'+_id).css("color","#37474F")
-  });
-  $(".palette-sel").mouseleave(function() {
-    var _id=this.id[3];
-    $('#pl-'+_id).css("color","#90A4AE")
-  });
-  */
-
-  /*
-  $('.cluster-circle').mouseenter(function(){
-    $('#'+this.id).css('background-color','#E0E0E0');
-  });
-
-  $('.cluster-circle').mouseleave(function(){
-    $('#'+this.id).css('background-color','#ECEFF1');  
-  });
-  */
-
 
   if((window.location+'').indexOf('/search')!=-1){
       genSwatch(currCluster); 
@@ -1067,11 +1020,11 @@ $('#light-btn').bind('click',function(){
 $('.rot-stop-btn').bind('click',function(){
   if(stopRotate){
     stopRotate=false;
-    $('.rot-stop-btn').attr('src','../../static/icons/pause.png')
+    $('.rot-stop-btn').attr('src','../../static/img/icons/pause.png')
   }
   else{
     stopRotate=true;
-      $('.rot-stop-btn').attr('src','../../static/icons/play.png')
+      $('.rot-stop-btn').attr('src','../../static/img/icons/play.png')
   } 
 })
 ///////////////////////
@@ -1227,7 +1180,7 @@ $('#image-upload-btn').bind('mouseleave',function(){
                              $('#image-scatter-plot').css('opacity','0');
 
                              setTimeout(function(){
-                                $('#image-preview').css('background-image', 'url(../../static/icons/sample/sample'+_id+'.png');
+                                $('#image-preview').css('background-image', 'url(../../static/img/sample/sample'+_id+'.png');
                                 $('#image-preview').css('opacity','1'); 
                              },200);
 
@@ -1337,6 +1290,8 @@ if((window.location+'').indexOf('/image')!=-1){
 ]
   
 updateImgPalette(imgClrs[paletteSize-3])
-
+setTimeout(function(){
+  handleCookies();
+},2000)
 
 }

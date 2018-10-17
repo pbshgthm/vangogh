@@ -18,16 +18,18 @@
 * mainGIF in dark theme
 * rotSpeed in fullscreen
 + animation in image
-+ loager gif text
 * overlay refining
 + cursor styling
-* close button on full screen
 
 
 
 ----DONE----------||||-------------------
 
 
+
+//+ loader gif text
+//* unify icons
+//* close button on full screen
 //+ set cookie
 //+ mobile block
 //+ cloud storage setup
@@ -80,8 +82,7 @@ image  -> search | button
 	   -> image  | button | disabled
 
 
-----NAMES---------||||-------------------
+----SNIPS---------||||-------------------
 
-magicolor
-verticolor
-
+#141414 dark
+#FAFAFA light

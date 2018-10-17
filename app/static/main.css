@@ -137,7 +137,7 @@ body{
 	top: 3.2vh;
 	right: 5vw;
 	cursor: pointer;
-	filter: contrast(70%) brightness(200%);
+	opacity: 0.8;
 }
 #light-btn{
 
@@ -147,9 +147,8 @@ body{
 	width: 2vw;
 	top: 2.7vh;
 	right: 5vw;
-	filter: contrast(15%) brightness(200%);
 	cursor: pointer;
-
+	opacity: 0.8;
 }
 
 
@@ -379,20 +378,7 @@ body{
     -o-transition: opacity 0.4s;
     transition: opacity 0.4s;
 }
-#main-full-close{
-	color: #263238;
-	position: absolute;
-	top: 4vh;
-	left: 2vw;
-	font-size: 3vw;
-	font-family: 'Lato', sans-serif;
-	display: none;
-	z-index: 21;
-	cursor: pointer;
-}
-#main-full-close:hover{
-	transform: scale(1.1);
-}
+
 #main-full-plot{
 
 	z-index: 20;
@@ -569,10 +555,9 @@ body{
 #dash-refresh{
 	position: absolute;
 	top: 86vh;
-	right: 6vw;
+	right: 5vw;
 	width: 2.5vw;
-	filter: contrast(50%) brightness(250%);
-	opacity: 0.8;
+	opacity: 0.5;
 	cursor: pointer;
 	display: none;
 }
@@ -621,9 +606,9 @@ body{
 #dash-search-icon{
 	z-index: 10;
 	position: absolute;
-	top: 11vh;
-	width: 2.5vw;
-	left: 28vw;
+	top: 11.5vh;
+	width: 1.75vw;
+	left: 28.5vw;
 	cursor: pointer;
 	opacity: 0.5;
 	filter: brightness(100%);
@@ -712,8 +697,7 @@ body{
 	width: 2.5vw;
 	top: 12vh;
 	right: 5vw;
-	opacity: 0.4;
-	filter: grayscale(100%) brightness(150%);
+	opacity: 0.5;
 	cursor: pointer;
 }
 #dash-swatch:hover{
@@ -992,173 +976,63 @@ body{
 	z-index: 10;
 	cursor: pointer;
 	position: absolute;	
-	width: 2.3vw;
-	opacity: 0.1;
+	height: 4vh;
+	opacity: 0.4;
 	cursor: pointer;
 	transition-duration: 0.5s;
 	display: none;
 }
-
-.full-btn-dark{
-	filter: contrast(50%) brightness(600%)!important;
-}
-
-
 
 .rot-stop-btn{
 	
 	z-index: 10;
 	position: absolute;	
-	width: 4vw;
-	color: #546E7A;
-	font-size: 1.5vw;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
-	padding-top: 1.5vh;
-	padding-bottom: 1.5vh;
-	border-radius: 10vh;
-	opacity: 0.1;
+	height: 4vh;
+	opacity: 0.4;
 	cursor: pointer;
 	transition-duration: 0.5s;
 	display: none;
 }
 
-.rot-stop-btn-dark{
-	filter: contrast(20%) brightness(500%);
-}
-
 #main-full-btn{
-	transform: scale(0.8);
 	left:30vw;
-	bottom: 7.35vh;
+	bottom: 8vh;
 }
 
 #main-rot-btn{
-	transform: scale(0.8);
-	left:24vw;
-	bottom: 4vh;
-}
-
-
-
-#image-full-btn{
-	transform: scale(0.8);
-	left:35vw;
-	bottom: 7.35vh;
-}
-#image-rot-btn{
-	transform: scale(0.8);
-	left:29vw;
-	bottom: 4vh;
-}
-
-#full-rot-btn{
-	z-index: 26;
-	opacity: 0.1!important;
-	transform: scale(0);
-	left: 48vw;
-	bottom: 4vh;
-}
-
-#main-rot-overlay{
-	padding-top: 1.5vh;
-	padding-bottom: 1.5vh;
-	display: none;
-	left:24vw;
-	bottom: 4vh;
-	opacity: 0.3!important;
-	z-index: 15;
-	position: absolute;	
-	width: 4vw;
-	color: #546E7A;
-	transition-duration: 0.5s;
-	
-}
-
-#main-full-overlay{
-	display: none;
-	left:30vw;
-	bottom: 7.3vh;
-	opacity: 0.3;
-	z-index: 20;
-	position: absolute;	
-	width: 2vw;
-	transition-duration: 0.5s;
-	
-
-}
-
-
-#image-rot-overlay{
-	padding-top: 1.5vh;
-	padding-bottom: 1.5vh;
-	display: none;
-	left:29vw;
-	bottom: 4vh;
-	opacity: 0.3!important;
-	z-index: 15;
-	position: absolute;	
-	width: 4vw;
-	color: #546E7A;
-	transition-duration: 0.5s;
-	
-}
-
-#image-full-overlay{
-	display: none;
-	left:35vw;
-	bottom: 7.3vh;
-	opacity: 0.3;
-	z-index: 15;
-	position: absolute;	
-	width: 2vw;
-	transition-duration: 0.5s;
-	
-
-}
-
-#image-scatter-plot:hover + .rot-stop-btn{
-	opacity: 0.1;
-}
-
-#image-scatter-plot:hover ~ .full-btn{
-	opacity: 0.1;
-}
-
-
-#image-scatter-plot:hover + .rot-stop-btn-dark{
-	opacity: 0.3;
-}
-
-#image-scatter-plot:hover ~ .full-btn-dark{
-	opacity: 0.3;
-}
-
-
-
-
-
-#main-scatter-plot:hover ~ .full-btn{
-	opacity: 0.1;
-}
-
-#main-scatter-plot:hover + .rot-stop-btn{
-	opacity: 0.1;
+	left:25.5vw;
+	bottom: 8vh;
 }
 
 .rot-stop-btn:hover{
-	opacity: 0.2;
+	opacity: 0.8;
 }
-
 .full-btn:hover{
-	opacity: 0.2;
+	opacity: 0.8;	
 }
 
 
-.rot-stop-btn-dark:hover{
-	opacity: 0.5!important;
+#image-full-btn{
+	left:35vw;
+	bottom: 8vh;
+}
+#image-rot-btn{
+	left:30.5vw;
+	bottom: 8vh;
 }
 
-.full-btn-dark:hover{
-	opacity: 0.5!important;
+
+
+
+#full-rot-btn{
+	z-index: 26;
+	transform: scale(0);
+	left: 48vw;
+	bottom: 6vh;
+}
+#full-close-btn{
+	transform: scale(0);
+	z-index: 26;
+	left: 52vw;
+	bottom: 6vh;
 }
