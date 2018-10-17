@@ -6,18 +6,20 @@
 	<link rel="stylesheet" type="text/css" href="../../static/main.css?v=2">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:100" rel="stylesheet">
 	<script type="text/javascript" src="../../static/jquery.min.js"></script>
+  	<script type="text/javascript" src="../../static/plotly-gl3d-latest.min.js"></script>
+	
 	
 </head>
 <body>
 
 
 <div id="loaded">
-<img src="../../static/icons/image-overlay-2.png" class="dash-overlay" id="image-overlay">
+<img src="../../static/img/overlays/image-overlay-2.png" class="dash-overlay" id="image-overlay">
 
 
 
-<img src="../../static/icons/moon.png" id="dark-btn">
-<img src="../../static/icons/sun.png" id="light-btn">
+<img src="../../static/img/icons/moon.png" id="dark-btn">
+<img src="../../static/img/icons/sun.png" id="light-btn">
 
 <div id="nav-pane">
 	<div class="nav-links" id="nav-search-link">Search</div>
@@ -28,7 +30,7 @@
 
 <div id="main-full-plot"></div>
 <div id="main-full-close">X</div>
-<img src="../../static/icons/pause.png" class="rot-stop-btn" id="full-rot-btn"/>
+<img src="../../static/img/icons/pause.png" class="rot-stop-btn" id="full-rot-btn"/>
 
 
 	<div id="vangogh-image">
@@ -37,8 +39,8 @@
 		</label>
 		
 		<div id="image-preview-backdrop"></div>
-		<img src="../../static/icons/loader-img.gif" id="imgload">
-		<div id="image-preview" style="background-image: url('../../static/icons/starrynight.jpg')">Drag image or click to upload</div>
+		<img src="../../static/img/loader-img.gif" id="imgload">
+		<div id="image-preview" style="background-image: url('../../static/img/sample/sample0.png')">Drag image or click to upload</div>
 	
 		<div id="image-palette-bar">
 			<div class="image-palette-colors" clr="#929FB3" id="imgclr0" style="background-color: #929FB3">
@@ -65,22 +67,22 @@
 
 		<div id="image-sample-panel">
 			
-			<div id="ims0" class="image-sample-img image-sample-img-sel" style="background-image: url(../../static/icons/sample/sample0.png);">
-			</div><div id="ims1" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample1.png);">	
-			</div><div id="ims2" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample2.png);">	
-			</div><div id="ims3" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample3.png);">	
-			</div><div id="ims4" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample4.png);">
-			</div><div id="ims5" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample5.png);">	
-			</div><div id="ims6" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample6.png);">	
-			</div><div id="ims7" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample7.png);">
-			</div><div id="ims8" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample8.png);">	
-			</div><div id="ims9" class="image-sample-img" style="background-image: url(../../static/icons/sample/sample9.png);"></div>	
+			<div id="ims0" class="image-sample-img image-sample-img-sel" style="background-image: url(../../static/img/sample/sample0.png);">
+			</div><div id="ims1" class="image-sample-img" style="background-image: url(../../static/img/sample/sample1.png);">	
+			</div><div id="ims2" class="image-sample-img" style="background-image: url(../../static/img/sample/sample2.png);">	
+			</div><div id="ims3" class="image-sample-img" style="background-image: url(../../static/img/sample/sample3.png);">	
+			</div><div id="ims4" class="image-sample-img" style="background-image: url(../../static/img/sample/sample4.png);">
+			</div><div id="ims5" class="image-sample-img" style="background-image: url(../../static/img/sample/sample5.png);">	
+			</div><div id="ims6" class="image-sample-img" style="background-image: url(../../static/img/sample/sample6.png);">	
+			</div><div id="ims7" class="image-sample-img" style="background-image: url(../../static/img/sample/sample7.png);">
+			</div><div id="ims8" class="image-sample-img" style="background-image: url(../../static/img/sample/sample8.png);">	
+			</div><div id="ims9" class="image-sample-img" style="background-image: url(../../static/img/sample/sample9.png);"></div>	
 			
 		</div>
 		<div id="image-scatter-plot"></div>
 
-		<img src="../../static/icons/pause.png" class="rot-stop-btn" id="main-rot-btn"/>
-		<img src="../../static/icons/full.png" class="full-btn" id="main-full-btn" />
+		<img src="../../static/img/icons/pause.png" class="rot-stop-btn" id="main-rot-btn"/>
+		<img src="../../static/img/icons/full.png" class="full-btn" id="main-full-btn" />
 	
 		
 	</div>
