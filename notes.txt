@@ -27,6 +27,8 @@
 
 ----DONE----------||||-------------------
 
+
+//+ set cookie
 //+ mobile block
 //+ cloud storage setup
 //+ cache setup
