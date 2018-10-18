@@ -45,7 +45,7 @@ def img():
 			return 'NOFILE'
 		if file and True:
 			img=getImage(BytesIO(file.read()),mode='RGB',size_=100)[1]
-	else: img=getImage('app/static/icons/sample/'+reqType+'.png',mode='RGB',size_=100)[1]
+	else: img=getImage('app/static/img/sample/'+reqType+'.png',mode='RGB',size_=100)[1]
 	colorData={}
 	colorData['palette']=[getPalette(img,i,mode='HEX') for i in range(3,8)]
 	colorData['scatter']=getPlot(img)
