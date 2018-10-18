@@ -41,21 +41,13 @@ def download(links,dir_name):
     	return
 
     tempName=dir_name+'-'+str(int(time.time()))
-    i=0
     os.makedirs(tempName)
-    def fetch(url):
-    	global i
-    	response = requests.get(url[0], stream=True)
-    	with open(tempName+'/'+str(i).zfill(4), 'wb') as out_file:
-    		shutil.copyfileobj(response.raw, out_file)
-    	i+=1
-
     def fetch(url):
     	r=requests.get(url[0], stream=True)
     	with open(tempName+'/'+str(url[1]).zfill(4), 'wb') as out_file:
     		shutil.copyfileobj(r.raw, out_file)
 
-    modLinks=[[links[i],i+i] for i in range(0,100)]
+    modLinks=[[links[i],i+1] for i in range(0,100)]
     Pool(10).map(fetch, modLinks)
     
     try:
