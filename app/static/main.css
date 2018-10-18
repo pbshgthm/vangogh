@@ -554,9 +554,9 @@ body{
 }
 #dash-refresh{
 	position: absolute;
-	top: 86vh;
-	right: 5vw;
-	width: 2.5vw;
+	top: 86.5vh;
+	right: 6.2vw;
+	width: 2vw;
 	opacity: 0.5;
 	cursor: pointer;
 	display: none;
@@ -694,9 +694,9 @@ body{
 #dash-swatch{
 	display: none;
 	position: absolute;
-	width: 2.5vw;
+	width: 2vw;
 	top: 12vh;
-	right: 5vw;
+	right: 5.1vw;
 	opacity: 0.5;
 	cursor: pointer;
 }
