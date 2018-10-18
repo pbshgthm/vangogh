@@ -1,6 +1,6 @@
 from flask import Flask,jsonify,render_template,request,send_file
 from app.engine import *
-import json
+import json, shutil
 from flask_compress import Compress
 from werkzeug.utils import secure_filename
 from io import BytesIO
@@ -57,18 +57,31 @@ def generate():
 	search_term=request.json['key']
 	_k=4
 	_k=request.json['paletteSize']
+	_cacheClear=request.json['cacheClear']
 	_ip=request.remote_addr
 
 	search_term=search_term.lower()
 	if search_term[-1]==' ':
 		search_term=search_term[:-1]
 
+	
 	try:
 		cache=os.listdir('desk')
 	except:
 		os.makedirs('desk')
 		cache=[]
+
+
+
 	if not search_term.replace(' ','_') in cache:
+		link_list=search(search_term,azureKey=keys.azureKey)
+		if(len(link_list)==0): 
+			print('ERROR',search_term)
+			return "SEARCH_ERROR"
+		download(link_list,'desk/'+search_term)
+	elif _cacheClear:
+		shutil.rmtree('desk/'+search_term.replace(' ','_'))
+		print('clearing cache for',search_term)
 		link_list=search(search_term,azureKey=keys.azureKey)
 		if(len(link_list)==0): 
 			print('ERROR',search_term)

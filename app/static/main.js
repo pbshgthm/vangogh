@@ -274,7 +274,7 @@ function hexToRgb(hex) {
 
 
 $('#dash-refresh').click(function(){
-  search(currKey);
+  search(currKey,cacheClear=true);
 })
 
 function initPalette(){
@@ -742,7 +742,7 @@ $('.palette-size-opt').click(function(){
 
 
 var searchPalette='';
-function search(key){
+function search(key,cacheClear=false){
     
     currKey=key;
     $('#dash-error-msg').hide();
@@ -789,7 +789,7 @@ function search(key){
     $.ajax({
         url: '/api/search',
         type: "POST",
-        data: JSON.stringify({ key: key , paletteSize : paletteSize}),
+        data: JSON.stringify({ key: key , paletteSize : paletteSize,cacheClear:cacheClear}),
         contentType: "application/json",
         success: function (colorData) {
                  if(colorData=='SEARCH_ERROR'){
