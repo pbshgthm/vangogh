@@ -47,7 +47,7 @@ def download(links,dir_name):
     	with open(tempName+'/'+str(url[1]).zfill(4), 'wb') as out_file:
     		shutil.copyfileobj(r.raw, out_file)
 
-    modLinks=[[links[i],i+1] for i in range(0,100)]
+    modLinks=[[links[i],i+1] for i in range(len(links))]
     Pool(10).map(fetch, modLinks)
     
     try:
