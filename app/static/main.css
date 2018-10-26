@@ -114,22 +114,6 @@ body{
 	transform: scale(1.05);
 }
 
-#help-btn{
-
-	font-size: 1.5vw;
-	z-index: 5;
-	position: fixed;
-	width: 1.5vw;
-	top: 3.2vh;
-	right: 12.7vw;
-	cursor: pointer;
-	filter: grayscale(1) contrast(90%) brightness(200%);
-}
-
-#help-btn:hover{
-	filter: grayscale(1) contrast(90%);
-}
-
 #dark-btn{
 	z-index: 5;
 	position: fixed;

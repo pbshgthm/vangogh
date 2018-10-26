@@ -6,6 +6,7 @@
 + cache archiving and deleting api
 + cache auto clear on multiple refresh
 + logger
++ image viewing/adding/deleting api
 
 
 ----UI------------||||------------------
