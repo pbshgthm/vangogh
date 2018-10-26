@@ -1295,3 +1295,34 @@ setTimeout(function(){
 },2000)
 
 }
+
+function fillArchiveList(dirList){
+  var list_="";
+  for(var i=0;i<dirList.length;i++)
+    list_+='<div class="archive-dir-name">'+dirList[i]+'</div>'
+  $('#archive-dir-list').append(list_);
+  var imgList_="";
+  for(var i=0;i<100;i++)
+    imgList_+='<div class="archive-view-img"></div>'
+  $('#archive-view-pane').append(imgList_);
+  
+
+  fillArchiveImg(archiveList[0])
+  $('.archive-dir-name').eq(0).addClass('archive-dir-name-sel');
+  
+  $('.archive-dir-name').bind('click',function(){
+    fillArchiveImg($(this).text());
+    $('.archive-dir-name').removeClass('archive-dir-name-sel');
+    $(this).addClass('archive-dir-name-sel');
+  })
+}
+
+function fillArchiveImg(dir){
+  for(var i=0;i<100;i++)
+    $('.archive-view-img').eq(i).css('background-image','url("../../static/desk/'+dir+'/'+padDigits(i+1,4)+'")')  
+}
+
+
+
+
+fillArchiveList(archiveList);

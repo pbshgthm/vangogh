@@ -1020,3 +1020,67 @@ body{
 	left: 52vw;
 	bottom: 6vh;
 }
+
+
+#archive-list-pane{
+	position: absolute;
+	top: 10vh;
+	left: 0vw;
+	width: 20vw;
+	height: 90vh;
+}
+#archive-view-pane{
+	position: absolute;
+	top: 20vh;
+	left: 22vw;
+	width: 77vw;
+	height: 75vh;
+	overflow-y: scroll;
+}
+.archive-view-img{
+	width: 7.4vw;
+	display: inline-block;
+	height: 7.4vw;
+	background-color: grey;
+	margin-right: 0.2vw;
+	background-size: cover;
+}
+
+#archive-title{
+	z-index: 13;
+	width: 16vw;
+	position: absolute;
+	left: 1vw;
+	font-size: 1.5vw;
+	font-family: 'Lato', sans-serif;
+	background: transparent;
+	border: none;
+	border-bottom: 2.5px solid #BDBDBD;
+	padding-left: 1vw;
+	padding-right: 2vw;
+	padding-bottom: 1vh;
+	color:#455A64;
+}
+
+#archive-dir-list{
+	position: absolute;
+	top: 10vh;
+	left: 0vw;
+	width: 17vw;
+	height: 75vh;
+	padding-left: 3vw;
+	overflow-y: scroll;
+}
+.archive-dir-name{
+	color: color:#455A64;
+	font-size: 1.5vw;
+	font-family: 'Lato', sans-serif;
+	cursor: pointer;
+}
+.archive-dir-name:hover{
+	text-decoration: underline;
+}
+.archive-dir-name-sel{
+	text-decoration: underline;
+	font-weight: bold;
+}

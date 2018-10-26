@@ -14,7 +14,7 @@ Compress(app)
 
 @app.route('/cachelist')
 def cacheList():
-	cache=os.listdir('desk')
+	cache=os.listdir('app/static/desk')
 	return jsonify(cache)
 
 @app.route('/')
@@ -35,6 +35,13 @@ def image():
 	data=json.load(open('app/static/image-init.json'))
 	return render_template('image.html',data=data)
 
+@app.route('/archive')
+def archive():
+	data={}
+	data['archive']=os.listdir('app/static/desk')
+	return render_template('archive.html',data=data)
+	
+	
 @app.route('/api/img', methods=['POST'])
 def img():
 	reqType=request.form['type']
@@ -66,9 +73,9 @@ def generate():
 
 	
 	try:
-		cache=os.listdir('desk')
+		cache=os.listdir('app/static/desk')
 	except:
-		os.makedirs('desk')
+		os.makedirs('app/static/desk')
 		cache=[]
 
 
@@ -78,17 +85,18 @@ def generate():
 		if(len(link_list)==0): 
 			print('ERROR',search_term)
 			return "SEARCH_ERROR"
-		download(link_list,'desk/'+search_term)
+		download(link_list,'app/static/desk/'+search_term)
 	elif _cacheClear:
-		shutil.rmtree('desk/'+search_term.replace(' ','_'))
+		shutil.rmtree('app/static/desk/'+search_term.replace(' ','_'))
 		print('clearing cache for',search_term)
 		link_list=search(search_term,azureKey=keys.azureKey)
 		if(len(link_list)==0): 
 			print('ERROR',search_term)
 			return "SEARCH_ERROR"
-		download(link_list,'desk/'+search_term)
+		download(link_list,'app/static/desk/'+search_term)
 	else:
 		print('using cache for '+search_term)
-	colorData=process('desk/'+search_term,_k)
+	colorData=process('app/static/desk/'+search_term,_k)
+	if colorData=="ERROR":return "SEARCH_ERROR"
 	return jsonify({'data':colorData})
 

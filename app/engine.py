@@ -128,16 +128,15 @@ def getClusters(imgData,fileList):
 		clusters[clt.labels_[i]][1].append(fileList[i])
 	
 	clusters.sort(key=lambda x: x[0])
-	return clusters
-
-
-def clusterCheck(clusters):
-	global clusterMin
-	for i in range(len(clusters)):
-		if(len(clusters[i][1])<clusterMin):
-			return False,i
-	return True,None
-
+	filCluster=[]
+	
+	for i in clusters:
+		if len(i[1])>=clusterMin:
+			filCluster.append(i)
+		else:
+			print('dropping')
+	return filCluster
+	
 
 def getPlot(img):
 	plot=[[],[],[]]
@@ -185,19 +184,9 @@ def process(_dir,paletteK):
 	
 	k=1
 	clusters=getClusters(imgData,fileList)
-	valid,ErrCltNum=clusterCheck(clusters)
-	while not valid:
-		if k>5:
-			del clusters[ErrCltNum]
-			valid,ErrCltNum=clusterCheck(clusters)
-			clusterK-=1
-			k=0
-			continue
-
-		k+=1
-		clusters=getClusters(imgData,fileList)
-		valid,ErrCltNum=clusterCheck(clusters)
-
+	if len(clusters) < 4:
+		print('insufficient sample for clustering')
+		return "ERROR"
 	data=getData(_dir,clusters,paletteK)
 	return data
 
