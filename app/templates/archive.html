@@ -40,7 +40,7 @@
 <script type="text/javascript" src="../../static/plotly-gl3d-latest.min.js"></script>
 <script type="text/javascript">
 	var archiveList={{data|tojson|safe}}
-	archiveList=archiveList['archive'];
+	archiveList=archiveList['archive'].sort();
 	var head = document.getElementsByTagName('head')[0];
 	var mainjs = document.createElement("script");
 	var jquery = document.createElement("script");
@@ -60,6 +60,6 @@
     	
  	}
 	head.appendChild(mainjs);
-
+	
 </script>
 </html>

@@ -1299,7 +1299,7 @@ setTimeout(function(){
 function fillArchiveList(dirList){
   var list_="";
   for(var i=0;i<dirList.length;i++)
-    list_+='<div class="archive-dir-name">'+dirList[i]+'</div>'
+    list_+='<div class="archive-dir-name" name="'+dirList[i]+'">'+dirList[i].replace('_',' ')+'</div>'
   $('#archive-dir-list').append(list_);
   var imgList_="";
   for(var i=0;i<100;i++)
@@ -1311,7 +1311,7 @@ function fillArchiveList(dirList){
   $('.archive-dir-name').eq(0).addClass('archive-dir-name-sel');
   
   $('.archive-dir-name').bind('click',function(){
-    fillArchiveImg($(this).text());
+    fillArchiveImg($(this).attr('name'));
     $('.archive-dir-name').removeClass('archive-dir-name-sel');
     $(this).addClass('archive-dir-name-sel');
   })
@@ -1325,4 +1325,6 @@ function fillArchiveImg(dir){
 
 
 
-fillArchiveList(archiveList);
+if((window.location+'').indexOf('/archive')!=-1){
+  fillArchiveList(archiveList);
+}

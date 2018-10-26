@@ -1041,7 +1041,7 @@ body{
 	width: 7.4vw;
 	display: inline-block;
 	height: 7.4vw;
-	background-color: grey;
+	background-color: #ECEFF1;
 	margin-right: 0.2vw;
 	background-size: cover;
 }
@@ -1082,5 +1082,4 @@ body{
 }
 .archive-dir-name-sel{
 	text-decoration: underline;
-	font-weight: bold;
 }
