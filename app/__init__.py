@@ -21,7 +21,6 @@ def cacheList():
 def index():
 	return render_template('index.html')
 
-
 @app.route('/home')
 def home():
 	return render_template('home.html')
@@ -35,13 +34,24 @@ def image():
 	data=json.load(open('app/static/image-init.json'))
 	return render_template('image.html',data=data)
 
-@app.route('/archive')
+@app.route('/imgcache')
 def archive():
 	data={}
 	data['archive']=os.listdir('app/static/desk')
 	return render_template('archive.html',data=data)
 	
-	
+@app.route('/what')
+def what():
+	return render_template('what.html')
+
+@app.route('/how')
+def how():
+	return render_template('how.html')
+
+@app.route('/sayhi')
+def sayhi():
+	return render_template('sayhi.html')
+
 @app.route('/api/img', methods=['POST'])
 def img():
 	reqType=request.form['type']

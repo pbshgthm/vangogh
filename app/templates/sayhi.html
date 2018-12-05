@@ -14,19 +14,32 @@
 
 
 <img src="static/img/index-bg.png" id="main-bg">
-	<div id="main-title">VANGOGH</div>
-	<div id="main-sub-title">search engine for color palettes</div>
-	<input id="main-search" type="text" name="search" placeholder="Search for palettes..">
-	<img src="static/img/icons/search.png" id="main-search-icon">
-	<div id="main-or">or</div>
-	<div id="main-vangogh-image">Upload an image</div>
 
-	<div id="main-desc">VANGOGH uses machine learning to generate color palettes associated with the search term</div>
-	<div id="main-prompt">try searching for</div><div id="main-prompt-list-holder"><div id="main-prompt-list">joy</div></div>
+<div id="nav-pane">
+	<div class="nav-links" id="nav-search-link"><a href="/home">Search</a></div>
+	<div class="nav-links" id="nav-image-link"><a href="/image">Upload image</a></div>
+	<div class="nav-links nav-links-sel" id="nav-blog-link">Blog</div>
+</div>
 
-	<div id="main-working"><a href="/how">how VANGOGH works</a></div>
 
+
+	<div id="about-pane"></div>
+	<div id="about-list">
+		<div class="about-list-name "><a href="/what">What's it ?</a></div>
+		<div class="about-list-name "><a href="/how">How does it work ?</a></div>
+		<div class="about-list-name about-list-name-sel">Say Hi !</div> 
+	</div>
+	<div id="about-title">What's it ?</div>
+	<div id="about-sayhi-content">
+		Have a detailed question about how VANGOGH works ?<br/> Have an idea for a cool new feature ?<br/> Found a bug on the site ?<br/> Or better, just wanna say Hi ?<br/> Please drop in.<br/><br/>
+		And yeah, I'm <span style="color: #470041">Poobesh Gowtham</span>,<br/> Industrial Design Undergrad, IDC School of Design, IIT Bombay.
+	</div>
+	<img src="static/img/icons/github.png" id="sayhi-github-img">
+	<div id="sayhi-github"><a href="https://github.com/wanderling/prism">https://github.com/wanderling/prism</a></div>
+	<img src="static/img/icons/email.png" id="sayhi-email-img">
+	<div id="sayhi-email"><a href="mailto:poobeshgowtham@gmail.com">poobeshgowtham@gmail.com</div>
 	
+
 </body>
 <script type="text/javascript" src="static/plotly-gl3d-latest.min.js"></script>
 <script type="text/javascript">

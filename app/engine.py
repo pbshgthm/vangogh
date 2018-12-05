@@ -11,8 +11,8 @@ from skimage.transform import resize
 
 clusterMin=5
 clusterK=10
-redImgSize=50
-detImgSize=20
+redImgSize=20
+detImgSize=10
 
 
 

@@ -216,19 +216,6 @@ $('.dash-overlay').click(function(){
 
 
 
-
-$('#nav-search-link').bind('click',function(){
-  if($('#nav-search-link').hasClass('nav-links-sel'))return;
-  window.location='/home';
-})
-
-$('#nav-image-link').bind('click',function(){
-  if($('#nav-image-link').hasClass('nav-links-sel'))return;
-  window.location='/image';
-})
-
-
-
 function padDigits(number, digits) {
     return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
 }
@@ -897,7 +884,7 @@ $(document).keydown(function(e) {
 
 
 $(window).bind( 'hashchange', function(e){
-  var key=window.location.href.split('#')[1].replace(/[^0-9A-Za-z" "+]/g, '').replace(/[+]/g,' ');
+  var key=window.location.href.split('#')[1].replace(/[^0-9A-Za-z" "+.]/g, '').replace(/[+]/g,' ');
   if($('#dash-search').val()!=key){
     $('#dash-search').val(key);
     search(key);
@@ -905,7 +892,7 @@ $(window).bind( 'hashchange', function(e){
  });
 
 if(window.location.href.split('#')[1]!='')
-  if(!ploted)search(window.location.href.split('#')[1].replace(/[^0-9A-Za-z" "+]/g, '').replace(/[+]/g,' '));
+  if(!ploted)search(window.location.href.split('#')[1].replace(/[^0-9A-Za-z" "+.]/g, '').replace(/[+]/g,' '));
 
 
 
@@ -922,14 +909,14 @@ $("#main-search").keyup(function (e) {
       if (e.which == 13) {
         key=$('#main-search').val();
         if(key!='')
-        window.location='/search#'+key.replace(/[^0-9A-Za-z" "+]/g, '').replace(/[' ']/g,'+');
+        window.location='/search#'+key.replace(/[^0-9A-Za-z" "+.]/g, '').replace(/[' ']/g,'+');
       }
 });
 
 $("#main-search-icon").bind('click',function(){
     key=$('#main-search').val();
     if(key!='')
-    window.location='/search#'+key.replace(/[^0-9A-Za-z" "+]/g, '').replace(/[' ']/g,'+');
+    window.location='/search#'+key.replace(/[^0-9A-Za-z" "+.]/g, '').replace(/[' ']/g,'+');
 })
 
 
@@ -1325,6 +1312,6 @@ function fillArchiveImg(dir){
 
 
 
-if((window.location+'').indexOf('/archive')!=-1){
+if((window.location+'').indexOf('/imgcache')!=-1){
   fillArchiveList(archiveList);
 }
