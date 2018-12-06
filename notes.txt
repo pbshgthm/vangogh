@@ -3,11 +3,12 @@
 ----SYSTEM--------||||------------------
 
 + minimise file size
-+ cache archiving and deleting api
-+ cache auto clear on multiple refresh
 + logger
-+ image viewing/adding/deleting api
 
+ 
++ increase asset loading time
++ add copyright text to archive
++ change blog to about
 
 ----UI------------||||------------------
 
@@ -27,7 +28,11 @@
 ----DONE----------||||-------------------
 
 
-
+//+	say hi
+//+ how it works
+//+ image viewing/adding/deleting api
+//+ cache archiving and deleting api
+//+ cache auto clear on multiple refresh
 //* cluster filtering change
 //+ loader gif text
 //* unify icons
