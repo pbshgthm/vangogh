@@ -266,7 +266,7 @@ $('#dash-refresh').click(function(){
 
 function initPalette(){
 
-  palWidth=document.documentElement.clientWidth*0.8/paletteSize+'px';
+  palWidth=document.documentElement.clientWidth*0.4/paletteSize+'px';
   
   clt_=0;
   plt_=1;
