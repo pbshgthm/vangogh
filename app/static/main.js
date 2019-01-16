@@ -266,7 +266,7 @@ $('#dash-refresh').click(function(){
 
 function initPalette(){
 
-  palWidth=document.documentElement.clientWidth*0.4/paletteSize+'px';
+  palWidth=document.documentElement.clientWidth*0.8/paletteSize+'px';
   
   clt_=0;
   plt_=1;
@@ -461,7 +461,7 @@ function swatchdownload(){
     var download = document.getElementById("swatch-download");
     var image = document.getElementById("palette-canvas").toDataURL("image/png")
                     .replace("image/png", "image/octet-stream");
-    download.setAttribute("download",'Vangogh-'+$('#dash-search').val().replace(/[' ']/g,'_')+'.png');
+    download.setAttribute("download",'VANGOGH-'+$('#dash-search').val().replace(/[' ']/g,'_')+'.png');
     download.setAttribute("href", image);
     
 }
@@ -780,7 +780,7 @@ function search(key,cacheClear=false){
         contentType: "application/json",
         success: function (colorData) {
                  if(colorData=='SEARCH_ERROR'){
-                    var errText="Sorry, Vangogh could not generate color palettes for "+key+" :(";
+                    var errText="Sorry, VANGOGH could not generate color palettes for "+key+" :(";
                     $('#dash-error-msg').text(errText).fadeIn();
                     $('#dash-loader').css('transform','scale(0)');
                  }
@@ -899,7 +899,7 @@ if(window.location.href.split('#')[1]!='')
 }
 
 
-$('#main-vangogh-image').bind('click',function(){
+$('#main-VANGOGH-image').bind('click',function(){
   window.location='/image'
 });
 
@@ -1167,7 +1167,7 @@ $('#image-upload-btn').bind('mouseleave',function(){
                              $('#image-scatter-plot').css('opacity','0');
 
                              setTimeout(function(){
-                                $('#image-preview').css('background-image', 'url(../../static/img/sample/sample'+_id+'.png');
+                                $('#image-preview').css('background-image', 'url(../../static/img/sample/sample'+_id);
                                 $('#image-preview').css('opacity','1'); 
                              },200);
 
@@ -1240,39 +1240,39 @@ if((window.location+'').indexOf('/image')!=-1){
 
   imgClrs=[
   [
-    "#8c9ec1",
-    "#526396",
-    "#8a7f51"
+    "#f99c69",
+    "#d7c7b4",
+    "#c47686"
   ],
   [
-    "#c1c098",
-    "#7488bb",
-    "#47578a",
-    "#716a4a"
+    "#fcbe11",
+    "#f2917b",
+    "#d6c8b5",
+    "#b37086"
   ],
   [
-    "#7d91c4",
-    "#c2bf90",
-    "#546599",
-    "#706949",
-    "#36436e"
+    "#fcbf0f",
+    "#f79678",
+    "#d5c8b6",
+    "#ca7685",
+    "#896284"
   ],
   [
-    "#8398ca",
-    "#c4c08d",
-    "#5f71a4",
-    "#425183",
-    "#6f6848",
-    "#2f3a5d"
+    "#fcbf0f",
+    "#f69579",
+    "#dbcdb7",
+    "#cb667a",
+    "#b39099",
+    "#7f5d82"
   ],
   [
-    "#cccea3",
-    "#8297c9",
-    "#5e70a4",
-    "#998c5a",
-    "#425283",
-    "#2d395f",
-    "#585542"
+    "#fcbf0f",
+    "#f89978",
+    "#daccb8",
+    "#d8707e",
+    "#b18f99",
+    "#9a5274",
+    "#6e6288"
   ]
 ]
   

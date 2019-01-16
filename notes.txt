@@ -1,33 +1,40 @@
 
 
+----SERVER--------||||------------------
+
++ Run on production server
++ Get HTTPS
++ Set status logging
++ Set activity alerts
+
 ----SYSTEM--------||||------------------
 
 + minimise file size
-+ logger
-
- 
-+ increase asset loading time
++ increase asset loading speed
 + add copyright text to archive
-+ change blog to about
+
 
 ----UI------------||||------------------
 
 
-+ keyboard shortcuts in help
++ About
++ overlay for dark
++ keyboard shortcuts in help ?? needed ??
 + theme transition
 * plot transition
 * sample image set
 * mainGIF in dark theme
 * rotSpeed in fullscreen
 + animation in image
-* overlay refining
-+ cursor styling
+
 
 
 
 ----DONE----------||||-------------------
 
-
+//* overlay refining
+//+ change blog to about
+//+ logger
 //+	say hi
 //+ how it works
 //+ image viewing/adding/deleting api

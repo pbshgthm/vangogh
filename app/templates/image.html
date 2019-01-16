@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>Vangogh 2.0</title>
+	<title>Vangogh - Image</title>
 	<link rel="stylesheet" type="text/css" href="../../static/main.css?v=2">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:100" rel="stylesheet">
 	<script type="text/javascript" src="../../static/jquery.min.js"></script>
@@ -23,7 +23,7 @@
 <div id="nav-pane">
 	<div class="nav-links" id="nav-search-link"><a href="/home">Search</a></div>
 	<div class="nav-links nav-links-sel" id="nav-image-link">Upload image</div>
-	<div class="nav-links " id="nav-blog-link"><a href="/what">Blog</a></div>
+	<div class="nav-links " id="nav-blog-link"><a href="/what">About</a></div>
 	<div class="nav-links " id="nav-help-link">Help</div>
 </div>
 
@@ -31,20 +31,20 @@
 <img src="../../static/img/icons/close.png"  class ="full-btn" id="full-close-btn">
 <img src="../../static/img/icons/pause.png" class="rot-stop-btn" id="full-rot-btn"/>
 
-	<div id="vangogh-image">
+	<div id="VANGOGH-image">
 		<label id="image-upload-area">
 			<input type="file" id="image-upload-btn" onchange="readURL(this);">
 		</label>
 		
 		<div id="image-preview-backdrop"></div>
 		<img src="../../static/img/loader-img.gif" id="imgload">
-		<div id="image-preview" style="background-image: url('../../static/img/sample/sample0.png')">Drag image or click to upload</div>
+		<div id="image-preview" style="background-image: url('../../static/img/sample/sample0')">Drag image or click to upload</div>
 	
 		<div id="image-palette-bar">
-			<div class="image-palette-colors" clr="#929FB3" id="imgclr0" style="background-color: #929FB3">
-			</div><div class="image-palette-colors" clr="#566591" id="imgclr1" style="background-color: #566591">
-			</div><div class="image-palette-colors" clr="#353F5C" id="imgclr2" style="background-color: #353F5C">
-			</div><div class="image-palette-colors" clr="#131A2C" id="imgclr3" style="background-color: #131A2C"></div>
+			<div class="image-palette-colors" clr="#0d85fa" id="imgclr0" style="background-color: #0d85fa">
+			</div><div class="image-palette-colors" clr="#ece5be" id="imgclr1" style="background-color: #ece5be">
+			</div><div class="image-palette-colors" clr="#bfcf47" id="imgclr2" style="background-color: #bfcf47">
+			</div><div class="image-palette-colors" clr="#48a151" id="imgclr3" style="background-color: #48a151"></div>
 		</div>
 			<div id="image-color-code">qwerty</div>
 			<div class="image-copy-alert">copied to clipoard</div>
@@ -65,16 +65,16 @@
 
 		<div id="image-sample-panel">
 			
-			<div id="ims0" class="image-sample-img image-sample-img-sel" style="background-image: url(../../static/img/sample/sample0.png);">
-			</div><div id="ims1" class="image-sample-img" style="background-image: url(../../static/img/sample/sample1.png);">	
-			</div><div id="ims2" class="image-sample-img" style="background-image: url(../../static/img/sample/sample2.png);">	
-			</div><div id="ims3" class="image-sample-img" style="background-image: url(../../static/img/sample/sample3.png);">	
-			</div><div id="ims4" class="image-sample-img" style="background-image: url(../../static/img/sample/sample4.png);">
-			</div><div id="ims5" class="image-sample-img" style="background-image: url(../../static/img/sample/sample5.png);">	
-			</div><div id="ims6" class="image-sample-img" style="background-image: url(../../static/img/sample/sample6.png);">	
-			</div><div id="ims7" class="image-sample-img" style="background-image: url(../../static/img/sample/sample7.png);">
-			</div><div id="ims8" class="image-sample-img" style="background-image: url(../../static/img/sample/sample8.png);">	
-			</div><div id="ims9" class="image-sample-img" style="background-image: url(../../static/img/sample/sample9.png);"></div>	
+			<div id="ims0" class="image-sample-img image-sample-img-sel" style="background-image: url(../../static/img/sample/sample0);">
+			</div><div id="ims1" class="image-sample-img" style="background-image: url(../../static/img/sample/sample1);">	
+			</div><div id="ims2" class="image-sample-img" style="background-image: url(../../static/img/sample/sample2);">	
+			</div><div id="ims3" class="image-sample-img" style="background-image: url(../../static/img/sample/sample3);">	
+			</div><div id="ims4" class="image-sample-img" style="background-image: url(../../static/img/sample/sample4);">
+			</div><div id="ims5" class="image-sample-img" style="background-image: url(../../static/img/sample/sample5);">	
+			</div><div id="ims6" class="image-sample-img" style="background-image: url(../../static/img/sample/sample6);">	
+			</div><div id="ims7" class="image-sample-img" style="background-image: url(../../static/img/sample/sample7);">
+			</div><div id="ims8" class="image-sample-img" style="background-image: url(../../static/img/sample/sample8);">	
+			</div><div id="ims9" class="image-sample-img" style="background-image: url(../../static/img/sample/sample9);"></div>	
 			
 		</div>
 		<div id="image-scatter-plot"></div>

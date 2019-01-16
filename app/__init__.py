@@ -19,7 +19,9 @@ if not os.path.isfile('app/static/masterLog.json'):
 	with open('app/static/masterLog.json','w') as emptyFile:
 		emptyFile.write(json.dumps(emptyLog))
 
-
+@app.route('/launch')
+def launch():
+	return render_template('launch.html')
 
 @app.route('/cachelist')
 def cacheList():
@@ -103,7 +105,7 @@ def img():
 			return 'NOFILE'
 		if file and True:
 			img=getImage(BytesIO(file.read()),mode='RGB',size_=100)[1]
-	else: img=getImage('app/static/img/sample/'+reqType+'.png',mode='RGB',size_=100)[1]
+	else: img=getImage('app/static/img/sample/'+reqType,mode='RGB',size_=100)[1]
 	
 	_ip=request.remote_addr
 	logger(_ip,'img',reqType)
