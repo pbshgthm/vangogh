@@ -1383,3 +1383,24 @@ body{
 	font-size: 1.5vw;
 	text-align: center;
 }
+#toyou-text{
+	position: absolute;
+	width: 60vw;
+	left: 20vw;
+	font-family: 'Lato', sans-serif;
+	font-size: 3vw;
+	text-align: center;
+	top: 45vh;
+	color: #546E7A;
+}
+
+#toyou2-text{
+	position: absolute;
+	width: 60vw;
+	left: 20vw;
+	font-family: 'Lato', sans-serif;
+	font-size: 2.5vw;
+	text-align: center;
+	top: 70vh;
+	color: #546E7A;
+}

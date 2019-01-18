@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>Vangogh - Launch</title>
+	<title>Vangogh - To You</title>
 	<link rel="stylesheet" type="text/css" href="static/main.css?v=2">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto:100" rel="stylesheet">
 	<script type="text/javascript" src="static/jquery.min.js"></script>
@@ -15,28 +15,10 @@
 
 <img src="static/img/index-bg.png" id="main-bg">
 
-	<div id="main-title">VANGOGH</div>
-	<div id="main-sub-title">search engine for color palettes</div>
-	<div id="launch-text">launching in</div>
-	<div id="launch-timer">
-		<div class="timer-box">
-			<div class="timer-value">00</div>
-			<div class="timer-name">days</div>
-		</div>
-		<div class="timer-box">
-			<div class="timer-value">00</div>
-			<div class="timer-name">hrs</div>
-		</div>
-		<div class="timer-box">
-			<div class="timer-value">00</div>
-			<div class="timer-name">min</div>
-		</div>
-		<div class="timer-box">
-			<div class="timer-value">00</div>
-			<div class="timer-name">secs</div>
-		</div>
-	</div>
-
+	<div id="main-title">To you</div>
+	<div id="toyou-text">Shilpha<br/>the one who means the most</div>
+	<div id="toyou2-text">Sam and Sarthak, friends who mean a lot<br/><br/>(although this got delayed because of them)</div>
+	
 </body>
 <script type="text/javascript" src="static/plotly-gl3d-latest.min.js"></script>
 <script type="text/javascript">
@@ -64,7 +46,7 @@
 <script>
 $('#launch-timer').hide();
 var isFirst=true;
-var countDownDate = new Date("Jan 19, 2019 00:15:00").getTime();
+var countDownDate = new Date("Jan 19, 2019 00:15:40").getTime();
 var x = setInterval(function() {
 
   var now = new Date().getTime();
@@ -88,7 +70,7 @@ var x = setInterval(function() {
   	$('.timer-value').eq(1).text("00");
   	$('.timer-value').eq(2).text("00");
   	$('.timer-value').eq(3).text("00");
-  	window.location='/toyou'
+  	window.location='/'
   }
 }, 1000);
 </script>

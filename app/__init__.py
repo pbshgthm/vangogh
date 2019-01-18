@@ -23,6 +23,10 @@ if not os.path.isfile('app/static/masterLog.json'):
 def launch():
 	return render_template('launch.html')
 
+@app.route('/toyou')
+def toyou():
+	return render_template('toyou.html')
+
 @app.route('/cachelist')
 def cacheList():
 	cache=os.listdir('app/static/desk')
@@ -92,6 +96,8 @@ def viewLog():
 	with open('app/static/masterLog.json','r') as logFile:
 		log=json.loads(logFile.read())
 		return jsonify(log)
+
+
 
 @app.route('/api/img', methods=['POST'])
 def img():

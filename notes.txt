@@ -9,12 +9,16 @@
 
 ----SYSTEM--------||||------------------
 
-+ minimise file size
+
++ 404 page
++ minimise file size !!!
 + increase asset loading speed
-+ add copyright text to archive
+* remove _ in place of second space
 
 
 ----UI------------||||------------------
+
++ SMOOTH EDGE FOR PLOTS !!!
 
 
 + About
