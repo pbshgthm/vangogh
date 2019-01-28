@@ -11,8 +11,6 @@
 
 
 + 404 page
-+ minimise file size !!!
-+ increase asset loading speed
 * remove _ in place of second space
 
 
@@ -22,20 +20,19 @@
 
 
 + About
-+ overlay for dark
-+ keyboard shortcuts in help ?? needed ??
 + theme transition
 * plot transition
-* sample image set
 * mainGIF in dark theme
 * rotSpeed in fullscreen
 + animation in image
 
 
-
-
 ----DONE----------||||-------------------
 
+//+ overlay for dark
+//* sample image set
+//+ minimise file size
+//+ increase asset loading speed
 //* overlay refining
 //+ change blog to about
 //+ logger

@@ -761,6 +761,7 @@ function search(key,cacheClear=false){
 
     window.location.hash=key.replace(/[' ']/g,'+');
     $('#dash-search').val(key);
+    document.title=key.substr(0,1).toUpperCase() + key.substr(1) + ' - Vangogh' ;
     if(key==""){
         setTimeout(function(){
           $('#dash-loader').css('transform','scale(0)');  
@@ -887,6 +888,7 @@ $(window).bind( 'hashchange', function(e){
   var key=window.location.href.split('#')[1].replace(/[^0-9A-Za-z" "+.]/g, '').replace(/[+]/g,' ');
   if($('#dash-search').val()!=key){
     $('#dash-search').val(key);
+    document.title=key.substr(0,1).toUpperCase() + key.substr(1) + ' - Vangogh' ;
     search(key);
   }
  });
