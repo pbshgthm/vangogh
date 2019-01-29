@@ -1281,12 +1281,16 @@ body{
 }
 
 #about-about-content{
-	font-size: 1.3vw;
+	font-size: 1.5vw;
 	font-family: 'Lato', sans-serif;
 	position: absolute;
 	left: 23vw;
-	top: 40vh;
+	top: 35vh;
 	width: 40vw;
+	color: #455A64;
+	text-align: left;
+}
+#about-about-content a{
 	color: #455A64;
 }
 #about-sayhi-content{
