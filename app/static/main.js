@@ -25,82 +25,11 @@ setTimeout(function(){
   $('#loaded').fadeIn();  
 },1000+waitTime);
 
-function changePrompt(ind){
-  var wordList=[
-  'sunset',
-  'winter',
-  'envy',
-  'water',
-  'india',
-  'nature',
-  'tiger',
-  'ocean',
-  'purple',
-  'diwali',
-  'cherry blossom',
-  'barbie',
-  'fire',
-  'sad',
-  'ice',
-  'forest',
-  'love',
-  'any word'
-  ];
-  if(ind>=wordList.length)return;
-  var word=wordList[ind];
-  
-      //*
-      setTimeout(function(){
-        $('#main-prompt-list').animate({'margin-top':'2.5vw','opacity':'0'},200);
-      },200);
-      setTimeout(function(){
-        $('#main-prompt-list').css('margin-top','-2.5vw');
-        $('#main-prompt-list').html(word);
-      },450);
-      setTimeout(function(){
-        $('#main-prompt-list').animate({'margin-top':'0vw','opacity':'1'},200);
-      },450);
-      setTimeout(function(){
-        changePrompt(++ind);
-      },900);
-      
-      /*/
-       //*
 
-        _word=$('#main-prompt-list').text();
-        var wdLenX=_word.length;
-        for(var j=0;j<wdLenX;j++){
-          _word=_word.slice(0,-1);
-          setTimeout(function(wd){
-            $('#main-prompt-list').text(wd);
-          },j*100,_word);
-        }
-        var wdLen=word.length;
-        setTimeout(function(){
-            _word='';
-            console.log(wdLen);
-            for(var j=0;j<wdLen;j++){
-              _word+=word.slice(j,j+1);
-              setTimeout(function(wd){
-                $('#main-prompt-list').text(wd);
-              },j*100,_word);
-            }
-        },10+100*wdLenX);
-        
-        setTimeout(function(){
-          changePrompt(++ind);
-        },400+100*(wdLen+wdLenX));
-      //*/
-    
-}
-
-changePrompt(0);
 
 window.onresize = function() {
-  $('#main-scatter-plot').hide();
-  setTimeout(function(){
-  window.location.reload();
-  },10);
+  selectPlot(clt_,plt_)
+  $('.palette-color').css('width',document.documentElement.clientWidth*0.4/paletteSize+'px')
 };
 
 
