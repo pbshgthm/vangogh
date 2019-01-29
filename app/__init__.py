@@ -19,13 +19,6 @@ if not os.path.isfile('app/static/masterLog.json'):
 	with open('app/static/masterLog.json','w') as emptyFile:
 		emptyFile.write(json.dumps(emptyLog))
 
-@app.route('/launch')
-def launch():
-	return render_template('launch.html')
-
-@app.route('/toyou')
-def toyou():
-	return render_template('toyou.html')
 
 @app.route('/cachelist')
 def cacheList():

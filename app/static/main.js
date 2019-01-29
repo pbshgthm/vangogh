@@ -148,14 +148,14 @@ function handleCookies(){
     var cVal=readCookie('vdash')+'';
     if(cVal=='null'){
       overlayIn();
-      createCookie('vdash','init-vd1',1);
+      createCookie('vdash','prod-vd1',90);
     }
   }
   if((window.location+'').indexOf('/image')!=-1){
     var cVal=readCookie('vimg')+'';
     if(cVal=='null'){
       overlayIn();
-      createCookie('vimg','init-vi1',1);
+      createCookie('vimg','prod-vi1',90);
     }
   }
   
@@ -1288,7 +1288,7 @@ setTimeout(function(){
 function fillArchiveList(dirList){
   var list_="";
   for(var i=0;i<dirList.length;i++)
-    list_+='<div class="archive-dir-name" name="'+dirList[i]+'">'+dirList[i].replace('_',' ')+'</div>'
+    list_+='<div class="archive-dir-name" name="'+dirList[i]+'">'+dirList[i].replace(/_/g,' ')+'</div>'
   $('#archive-dir-list').append(list_);
   var imgList_="";
   for(var i=0;i<100;i++)

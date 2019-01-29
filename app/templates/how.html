@@ -36,19 +36,19 @@
 		<div class="work-content" id="work-web">
 			When you search for a color palette, VANGOGH searches the internet using BING search API, and downloads 100 images tagged with the search term. It then resizes the images to 50*50 pixels to improve efficiency. The images are cached and can be viewed <a target="blank" href="/imgcache">here</a>.
 		</div>
-		<img id="work-img-search" src="static/img/about/search.jpg">
+		<img id="work-img-search" src="static/img/about/search.png">
 		<div class="work-content" id="work-cluster">
 			The images are clustered based on perceptual similarity, ie, similar colored images are grouped together. This is done by generating <i>color moment</i> for each image, which serves as the signature of the image, which are then used to cluster, using an algorithm called <i>K-Means clustering.</i>
 		</div>
-		<img id="work-img-cluster" src="static/img/about/cluster.jpg">
+		<img id="work-img-cluster" src="static/img/about/cluster.png">
 		<div class="work-content" id="work-colors">
 			Each image is then converted to a collection of pixels. The constituting colors are visualised on a 3D space, where the spatial coordinates X,Y,Z are the values R,G,B of the pixel. The collection of colored points is then grouped using <i>K-Means clustering</i>, to generate the color palette. Palettes are tweaked and ranked based on color theory.  
 		</div>
-		<img id="work-img-color" src="static/img/about/color.jpg">
+		<img id="work-img-color" src="static/img/about/color.png">
 		<div class="work-content" id="work-palette">
 			Each image now has a palette. And palettes from the same image cluster create a palette theme as they share a common color scheme. VANGOGH currently provides 4 themes with 5 palettes in each. The palette data and the 3D visualisation of color space of the images are sent to the browser, all under 8 secs.
 		</div>
-		<img id="work-img-palette" src="static/img/about/palette.jpg">
+		<img id="work-img-palette" src="static/img/about/palette.png">
 	</div>
 	
 

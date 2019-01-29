@@ -1,34 +1,32 @@
+----LINKS--------||||------------------
+
+
+https://github.com/wanderling/vangogh/
+https://thevangogh.in
+https://vangogh-search.herokuapp.com/  ->  Live from GITHUB
 
 
 ----SERVER--------||||------------------
 
-+ Run on production server
-+ Get HTTPS
 + Set status logging
-+ Set activity alerts
 
 ----SYSTEM--------||||------------------
 
-
-+ 404 page
-* remove _ in place of second space
 
 
 ----UI------------||||------------------
 
 + SMOOTH EDGE FOR PLOTS !!!
-
-
 + About
-+ theme transition
-* plot transition
-* mainGIF in dark theme
 * rotSpeed in fullscreen
-+ animation in image
-
 
 ----DONE----------||||-------------------
 
+
+//* cookie fomalise
+//* remove _ in place of second space
+//+ Run on production server
+//+ Get HTTPS
 //+ overlay for dark
 //* sample image set
 //+ minimise file size
