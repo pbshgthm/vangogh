@@ -19,7 +19,6 @@ if not os.path.isfile('app/static/masterLog.json'):
 	with open('app/static/masterLog.json','w') as emptyFile:
 		emptyFile.write(json.dumps(emptyLog))
 
-
 @app.route('/cachelist')
 def cacheList():
 	cache=os.listdir('app/static/desk')
