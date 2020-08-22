@@ -188,6 +188,7 @@ def process(_dir,paletteK):
 		print('insufficient sample for clustering')
 		return "ERROR"
 	data=getData(_dir,clusters,paletteK)
+	shutil.rmtree(_dir)
 	return data
 
 
