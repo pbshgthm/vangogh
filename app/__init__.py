@@ -26,37 +26,37 @@ def cacheList():
 
 @app.route('/')
 def index():
-	_ip=request.remote_addr
-	logger(_ip,'page','index')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','index')
 
 	return render_template('index.html')
 
 @app.route('/home')
 def home():
-	_ip=request.remote_addr
-	logger(_ip,'page','home')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','home')
 
 	return render_template('home.html')
 
 @app.route('/search')
 def palette():
-	_ip=request.remote_addr
-	logger(_ip,'page','search')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','search')
 
 	return render_template('search.html')
 
 @app.route('/image')
 def image():
-	_ip=request.remote_addr
-	logger(_ip,'page','image')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','image')
 
 	data=json.load(open('app/static/image-init.json'))
 	return render_template('image.html',data=data)
 
 @app.route('/imgcache')
 def archive():
-	_ip=request.remote_addr
-	logger(_ip,'page','cache')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','cache')
 
 	data={}
 	data['archive']=os.listdir('app/static/desk')
@@ -64,22 +64,22 @@ def archive():
 	
 @app.route('/what')
 def what():
-	_ip=request.remote_addr
-	logger(_ip,'page','what')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','what')
 
 	return render_template('what.html')
 
 @app.route('/how')
 def how():
-	_ip=request.remote_addr
-	logger(_ip,'page','how')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','how')
 
 	return render_template('how.html')
 
 @app.route('/sayhi')
 def sayhi():
-	_ip=request.remote_addr
-	logger(_ip,'page','sayhi')
+	#_ip=request.remote_addr
+	#logger(_ip,'page','sayhi')
 
 	return render_template('sayhi.html')
 
@@ -105,8 +105,8 @@ def img():
 			img=getImage(BytesIO(file.read()),mode='RGB',size_=100)[1]
 	else: img=getImage('app/static/img/sample/'+reqType,mode='RGB',size_=100)[1]
 	
-	_ip=request.remote_addr
-	logger(_ip,'img',reqType)
+	#_ip=request.remote_addr
+	#logger(_ip,'img',reqType)
 
 
 	colorData={}
@@ -123,8 +123,8 @@ def generate():
 	_k=request.json['paletteSize']
 	_cacheClear=request.json['cacheClear']
 	
-	_ip=request.remote_addr
-	logger(_ip,'search',search_term)
+	#_ip=request.remote_addr
+	#logger(_ip,'search',search_term)
 
 	search_term=search_term.lower()
 	if search_term[-1]==' ':
