@@ -48,8 +48,9 @@ def download(links,dir_name):
     		shutil.copyfileobj(r.raw, out_file)
 
     modLinks=[[links[i],i+1] for i in range(len(links))]
-    Pool(10).map(fetch, modLinks)
-    
+    pool=Pool(10)
+    pool.map(fetch, modLinks)
+    pool.close()
     try:
     	os.rename(tempName,dir_name)
     except:
