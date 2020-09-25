@@ -1,1 +1,1 @@
-azureKey="62df2c67660e4ddea99037a52090a474"
+azureKey="3dedc137b04a446ea0d2af7e804d44cd"
