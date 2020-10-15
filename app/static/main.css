@@ -8,6 +8,17 @@ body{
 	background-color:#FAFAFA;
 }
 
+#support{
+	position: absolute;
+	z-index: 5;
+	width: 300px;
+	bottom: 20px;
+	left: 20px;
+	transition: 0.5s;
+}
+#support:hover{
+	transform: scale(1.05);
+}
 
 #preload{
 	position: absolute;
