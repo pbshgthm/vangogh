@@ -9,6 +9,7 @@ body{
 }
 
 #support{
+	display: none;
 	position: absolute;
 	z-index: 5;
 	width: 300px;
