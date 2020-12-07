@@ -21,6 +21,7 @@ body{
 	opacity: 0.8;
 }
 #support-close{
+	display: none;
 	cursor: pointer;
 	z-index: 6;
 	font-family: sans-serif;
