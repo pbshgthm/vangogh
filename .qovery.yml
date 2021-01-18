@@ -1,0 +1,11 @@
+---
+application:
+  name: "vangogh"
+  project: "vangogh"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-vangogh"
+  routes:
+  - application_name: "vangogh"
+    paths:
+    - "/*"
