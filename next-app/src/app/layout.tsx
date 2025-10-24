@@ -10,6 +10,14 @@ export const metadata: Metadata = {
     description: "Get accurate color palettes for any word, idea or theme.",
     url: "https://thevangogh.in",
     type: "website",
+    images: [
+      {
+        url: "/static/img/fb-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Vangogh - Search engine for color palettes",
+      },
+    ],
   },
 };
 
@@ -30,6 +38,20 @@ export default function RootLayout({
           rel="shortcut icon"
           href="/static/img/favicon.ico"
           type="image/x-icon"
+        />
+        <meta property="og:url" content="https://thevangogh.in" />
+        <meta property="og:type" content="Website" />
+        <meta
+          property="og:title"
+          content="Vangogh - Search engine for color palettes"
+        />
+        <meta
+          property="og:description"
+          content="Get accurate color palettes for any word, idea or theme."
+        />
+        <meta
+          property="og:image"
+          content="/static/img/fb-preview.png"
         />
         <Script
           src="/static/jquery.min.js"
