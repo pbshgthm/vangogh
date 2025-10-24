@@ -185,16 +185,25 @@ export default function ImagePage() {
       </Script>
       <Script id="image-upload-handler" strategy="afterInteractive">
         {`
-          document.addEventListener('DOMContentLoaded', function () {
+          function bindImageUpload() {
             var uploadInput = document.getElementById('image-upload-btn');
             if (uploadInput) {
+              if (uploadInput.dataset.vgBound === 'true') {
+                return;
+              }
               uploadInput.addEventListener('change', function () {
                 if (typeof readURL === 'function') {
                   readURL(this);
                 }
               });
+              uploadInput.dataset.vgBound = 'true';
             }
-          });
+          }
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            bindImageUpload();
+          } else {
+            document.addEventListener('DOMContentLoaded', bindImageUpload);
+          }
         `}
       </Script>
     </>
